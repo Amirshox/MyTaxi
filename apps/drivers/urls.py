@@ -4,7 +4,7 @@ from drivers.views import CarViewSet, DriverViewSet
 
 router = routers.DefaultRouter()
 
-router.register('driver', DriverViewSet)
-router.register('car', CarViewSet)
+# router.register('driver', DriverViewSet)
+# router.register('car', CarViewSet)
 
 urlpatterns = router.urls
