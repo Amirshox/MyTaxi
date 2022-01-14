@@ -20,7 +20,7 @@ def upload_name(instance, filename):
 
 class User(AbstractUser):
     phone_number = models.CharField(max_length=13, validators=[phone_regex])
-    photo = models.ImageField(upload_to=upload_name)
+    photo = models.ImageField(upload_to=upload_name, null=True, blank=True)
 
     def __str__(self):
         return self.username

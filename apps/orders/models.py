@@ -30,3 +30,6 @@ class Order(BaseModel):
 
     def __str__(self):
         return self.status
+
+    class Meta:
+        ordering = ('modified_date',)
