@@ -9,18 +9,13 @@ from orders.models import Order
 from orders.serializers import OrderListSerializer, OrderCreateUpdateSerializer
 
 
-class OrderCreateViewSet(mixins.CreateModelMixin, GenericViewSet):
+class OrderCreateViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, GenericViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderCreateUpdateSerializer
     permission_classes = (IsAuthenticated,)
 
     def perform_create(self, serializer):
         serializer.save(client_id=self.request.user.id)
-
-
-class OrderUpdateViewSet(mixins.UpdateModelMixin, GenericViewSet):
-    queryset = Order.objects.all()
-    serializer_class = OrderCreateUpdateSerializer
 
 
 class OrderListApiView(ListAPIView):
