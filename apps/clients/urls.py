@@ -4,6 +4,6 @@ from clients.views import ClientViewSet
 
 router = routers.DefaultRouter()
 
-router.register('client', ClientViewSet)
+# router.register('client', ClientViewSet)
 
 urlpatterns = router.urls

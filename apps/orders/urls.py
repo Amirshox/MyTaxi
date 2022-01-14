@@ -9,7 +9,7 @@ router.register('create', OrderCreateViewSet)
 router.register('update-status', OrderUpdateViewSet)
 
 urlpatterns = [
-    path('client/<int:pk>/', OrderListApiView.as_view())
+    path('orders/client/<int:pk>/', OrderListApiView.as_view())
 ]
 
 urlpatterns += router.urls
