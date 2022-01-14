@@ -1,0 +1,210 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$qtjWdNUnwCkiv5fOK10Tug$cezyZO3H/zlBvlOkXrwaogIJ3HrOLbZ1b7ULMIy3m+g=",
+      "last_login": "2022-01-14T20:28:59.523Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-01-14T20:28:44.395Z",
+      "phone_number": "",
+      "photo": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$oJ8SFgcegUkx7wMlB4Iuys$kDDjEtf0Vk1MjSYxi/3uL6QvuJwOA9nTJVrbnlnHI1k=",
+      "last_login": "2022-01-14T20:29:19Z",
+      "is_superuser": false,
+      "username": "user1",
+      "first_name": "User",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-01-14T20:29:13Z",
+      "phone_number": "998931234567",
+      "photo": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$z0lNKFrvtP1lmKKWKvQxXR$wJMtfeTW6K6virBVJf0SNdlTv5bHLYBzXYyIrQPIFYs=",
+      "last_login": "2022-01-14T20:29:46Z",
+      "is_superuser": false,
+      "username": "user2",
+      "first_name": "User2",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-01-14T20:29:42Z",
+      "phone_number": "998456789012",
+      "photo": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$3AdQmuOdQ4O3qazNcgPYI8$CKPJ5gBKfULLhaQtJLBqqCVAokaPtio/Uur+ulJRyRI=",
+      "last_login": "2022-01-14T20:30:32Z",
+      "is_superuser": false,
+      "username": "user3",
+      "first_name": "User3",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-01-14T20:30:28Z",
+      "phone_number": "998765432112",
+      "photo": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "clients.client",
+    "pk": 1,
+    "fields": {
+      "created_date": "2022-01-14T20:32:38.986Z",
+      "modified_date": "2022-01-14T20:32:38.986Z",
+      "user": 4
+    }
+  },
+  {
+    "model": "clients.client",
+    "pk": 2,
+    "fields": {
+      "created_date": "2022-01-14T20:33:19.379Z",
+      "modified_date": "2022-01-14T20:33:19.379Z",
+      "user": 1
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+      "created_date": "2022-01-14T20:34:08.097Z",
+      "modified_date": "2022-01-14T20:37:28.871Z",
+      "client": 2,
+      "driver": null,
+      "status": "CANCELED",
+      "start_point_lat": "12.1231241432214",
+      "start_point_long": "34.3431414134134",
+      "end_point_lat": "34.4324324234234",
+      "end_point_long": "87.2343423423423",
+      "amount": 12000
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 2,
+    "fields": {
+      "created_date": "2022-01-14T20:34:45.396Z",
+      "modified_date": "2022-01-14T20:37:54.052Z",
+      "client": 1,
+      "driver": 1,
+      "status": "FINISHED",
+      "start_point_lat": "12.12413412412412",
+      "start_point_long": "23.32523523523523",
+      "end_point_lat": "45.45235325235235",
+      "end_point_long": "54.54354353543534",
+      "amount": 8000
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 3,
+    "fields": {
+      "created_date": "2022-01-14T20:35:32.902Z",
+      "modified_date": "2022-01-14T20:37:43.368Z",
+      "client": 1,
+      "driver": 1,
+      "status": "ACCEPTED",
+      "start_point_lat": "12.123123123112",
+      "start_point_long": "43.124312312321",
+      "end_point_lat": "54.124123123123",
+      "end_point_long": "65.234234234234",
+      "amount": 8000
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 4,
+    "fields": {
+      "created_date": "2022-01-14T20:36:18.207Z",
+      "modified_date": "2022-01-14T20:36:18.207Z",
+      "client": 2,
+      "driver": 2,
+      "status": "CREATED",
+      "start_point_lat": "12.1231231231232",
+      "start_point_long": "34.3432423423424",
+      "end_point_lat": "23.2342423423434",
+      "end_point_long": "12.2342323423443",
+      "amount": 4000
+    }
+  },
+  {
+    "model": "drivers.car",
+    "pk": 1,
+    "fields": {
+      "created_date": "2022-01-14T20:31:13.292Z",
+      "modified_date": "2022-01-14T20:31:13.292Z",
+      "number": "01A777AA",
+      "model": "Gentra",
+      "color": "black",
+      "seria_number": "234567890-jhfghjoiuygif"
+    }
+  },
+  {
+    "model": "drivers.car",
+    "pk": 2,
+    "fields": {
+      "created_date": "2022-01-14T20:31:49.893Z",
+      "modified_date": "2022-01-14T20:31:49.893Z",
+      "number": "01A700AA",
+      "model": "Maluba",
+      "color": "white",
+      "seria_number": "dhjodgi5887ryihijop[t"
+    }
+  },
+  {
+    "model": "drivers.driver",
+    "pk": 1,
+    "fields": {
+      "created_date": "2022-01-14T20:32:18.093Z",
+      "modified_date": "2022-01-14T20:32:18.093Z",
+      "user": 2,
+      "car": 1,
+      "balance": 0
+    }
+  },
+  {
+    "model": "drivers.driver",
+    "pk": 2,
+    "fields": {
+      "created_date": "2022-01-14T20:32:25.514Z",
+      "modified_date": "2022-01-14T20:32:25.514Z",
+      "user": 3,
+      "car": 2,
+      "balance": 0
+    }
+  }
+]
