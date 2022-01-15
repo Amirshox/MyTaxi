@@ -1,4 +1,3 @@
-from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
@@ -15,7 +14,6 @@ class ClientViewSet(GenericViewSet):
     @action(methods=['get'], detail=True)
     def orders(self, request, pk=None):
         client = self.get_object()
-        # orders = client.orders.filter_queryset()
         orders = client.orders.all()
         serializer = OrderListSerializer(orders, many=True)
         return Response(serializer.data)

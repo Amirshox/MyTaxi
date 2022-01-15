@@ -1,20 +1,23 @@
-
-
 ## PROJECT MYTAXI
 
-#### for Linux
-> git clone https://github.com/Amirshox/MyTaxi.git
+**for Linux**
 
-> cd MyTaxi
+`git clone https://github.com/Amirshox/MyTaxi.git`
 
-> python3 -m venv venv
+`cd MyTaxi`
 
-> source venv/bin/activate
+`python3 -m venv venv`
 
-> pip install -r requirements.txt
+`source venv/bin/activate`
 
-> python3 manage.py migrate
+`pip install -r requirements.txt`
 
-> python3 manage.py loaddata fixtures.json
+`python3 manage.py migrate`
 
-> python3 manage.py runserver
+`python3 manage.py loaddata fixtures.json`
+
+_login: `admin`_
+
+_password: `1`_
+
+`python3 manage.py runserver`
