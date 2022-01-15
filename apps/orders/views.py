@@ -8,7 +8,7 @@ from rest_framework.viewsets import GenericViewSet
 from orders.models import Order
 from orders.serializers import OrderListSerializer, OrderCreateUpdateSerializer
 
-DATE_FORMAT = "%Y-%d/%m"
+DATE_FORMAT = "%Y-%d-%m"
 
 
 class OrderCreateViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, GenericViewSet):
@@ -35,9 +35,9 @@ class OrderListApiView(ListAPIView):
         if client_id:
             queryset = queryset.filter(client_id=client_id)
         if from_date:
-            queryset = queryset.filter(created_time__date__gte=from_date)
+            queryset = queryset.filter(modified_date__date__gte=from_date)
         if to_date:
-            queryset = queryset.filter(created_time__date__lte=to_date)
+            queryset = queryset.filter(modified_date__date__lte=to_date)
         return queryset
 
     @staticmethod

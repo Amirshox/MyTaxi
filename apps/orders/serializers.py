@@ -21,6 +21,8 @@ class OrderListSerializer(serializers.ModelSerializer):
             'end_point_lat',
             'end_point_long',
             'amount',
+            'created_date',
+            'modified_date',
         ]
 
 
