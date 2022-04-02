@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': ENV.get('DATABASE_NAME', 'mytaxi'),
         'USER': ENV.get('DATABASE_USER', 'admin'),
         'PASSWORD': ENV.get('DATABASE_PASSWORD', '1'),
-        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
